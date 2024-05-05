@@ -4,7 +4,7 @@ public class ConversorDolares{
         this.pesos =pesos;
     }
     public double aDolares(){
-        return 0.59*pesos;
+        return 0.059*pesos;
     }
     public double getPesos() {
         return pesos;
