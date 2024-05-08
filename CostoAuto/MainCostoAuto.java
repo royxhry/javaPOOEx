@@ -3,18 +3,30 @@ import java.util.Scanner;
 public class MainCostoAuto {
 
     public static void main(String[] args) {
+        // Crear un objeto Scanner para leer el costo del automóvil
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingresa el costo del automovil: ");
+        System.out.println("Ingresa el costo del automóvil:");
         double costoa = sc.nextDouble();
+        
+        // Crear un objeto de tipo CostoAuto con el costo inicial del automóvil
         CostoAuto costoAuto = new CostoAuto();
         costoAuto.setCostoa(costoa);
+        
+        // Calcular el pago del vendedor (pgv) y los impuestos
         costoAuto.setPgv(costoa);
         costoAuto.setImpuestos(costoa);
+        
+        // Calcular el costo final del automóvil
         costoAuto.setCostof(costoa);
         double costof = costoAuto.calcularCosto();
-        System.out.println("El costo de el automovil es:" +costoa+" y su costo final seria "+costof+"pgv:");
-        //agregue el toString para ver que se hayan ejecutado las operaciones de forma correcta
+        
+        // Imprimir el costo inicial del automóvil y su costo final
+        System.out.println("El costo del automóvil es: " + costoa + " y su costo final sería: " + costof);
+        
+        // Imprimir la información del costo del automóvil utilizando el método toString
         System.out.println(costoAuto.toString());
+        
+        // Cerrar el Scanner
         sc.close();
     }
 }
